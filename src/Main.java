@@ -8,6 +8,8 @@ public class Main {
         SelectionSort sorter1 = new SelectionSort();
         InsertionSort sorter2 = new InsertionSort();
         MergeSort sorter3 = new MergeSort();
+        Quicksort sorter4 = new Quicksort();
+        CountingSort sorter5 = new CountingSort();
 
         System.out.println("Hello muwonge lawrence, welcome to  datastuctures and algorithms.");
         System.out.println("Today its " + new Date());
@@ -35,6 +37,12 @@ public class Main {
         System.out.println("4. Merge sort  with O(nlogn) / Divide and conquer algorithm");
         System.out.println("sorting the array in ascending order using Mergesort;");
         sorter3.ascending(numbers);
+        System.out.println(Arrays.toString(numbers));
+        System.out.println("5.-- sorting the array using quick sort Algorithm--");
+        sorter4.sort(numbers);
+        System.out.println(Arrays.toString(numbers));
+        System.out.println("6.** sorting the array using  countingSort  Algorithm **");
+        sorter5.sort(numbers , 10);
         System.out.println(Arrays.toString(numbers));
 
 
