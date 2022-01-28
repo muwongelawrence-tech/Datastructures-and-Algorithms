@@ -4,12 +4,19 @@ import java.util.Arrays;
 public class Main {
     public static void main(String[] args){
          int[] numbers = { 1,5,8,2,3,8,4,6,7,10,9 };
+         int[] sorted_numbers = { 1,2,3,4,5,6,7};
         Bubble_sort sorter = new Bubble_sort();
         SelectionSort sorter1 = new SelectionSort();
         InsertionSort sorter2 = new InsertionSort();
         MergeSort sorter3 = new MergeSort();
         Quicksort sorter4 = new Quicksort();
         CountingSort sorter5 = new CountingSort();
+        LinearSearch search1 = new LinearSearch();
+        BinarySearch search2 = new BinarySearch();
+
+        int searched_number = search1.search(numbers , 10);
+        int searched_number2 =  search2.binarySearchRec(sorted_numbers , 7);
+        System.out.println("the number was found in index "+ searched_number2 + " of the array");
 
         System.out.println("Hello muwonge lawrence, welcome to  datastuctures and algorithms.");
         System.out.println("Today its " + new Date());
