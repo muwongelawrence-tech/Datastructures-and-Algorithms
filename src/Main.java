@@ -13,10 +13,12 @@ public class Main {
         CountingSort sorter5 = new CountingSort();
         LinearSearch search1 = new LinearSearch();
         BinarySearch search2 = new BinarySearch();
+        TernarySearch search3 = new TernarySearch();
+        ExponentialSearch search4 = new ExponentialSearch();
 
-        int searched_number = search1.search(numbers , 10);
-        int searched_number2 =  search2.binarySearchRec(sorted_numbers , 7);
-        System.out.println("the number was found in index "+ searched_number2 + " of the array");
+        System.out.println("-------Testing the searching Algorithms------------");
+        int searched_number =  search4.exponentialSearch(sorted_numbers , 7);
+        System.out.println("the number was found in index "+ searched_number + " of the array");
 
         System.out.println("Hello muwonge lawrence, welcome to  datastuctures and algorithms.");
         System.out.println("Today its " + new Date());
