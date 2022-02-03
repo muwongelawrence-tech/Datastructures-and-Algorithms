@@ -21,6 +21,16 @@ public class Main {
         ExponentialSearch search4 = new ExponentialSearch();
 
         // Data Structures
+        //Linked lists
+        LinkedList items_2 = new LinkedList();
+        items_2.addLast(10);
+        items_2.addLast(20);
+        items_2.addLast(30);
+//        System.out.println(items_2.indexOf(40));
+//        items_2.removeFirst();
+        items_2.removeLast();
+        System.out.println(items_2.contains(30));
+
         ArraysDemo items = new ArraysDemo(5);
         System.out.println("-------working with arrays----------");
         items.insert(5);
@@ -30,13 +40,15 @@ public class Main {
         items.insert(10);
         items.insert(11);
         items.insert(12);
-        items.removeAt(2);
+//        items.removeAt(2);
         System.out.println("printing index of passed item");
         System.out.println(items.indexOf(12));
         System.out.println("printing the items in the array.");
         items.print();
         System.out.println("reversing the order of the original array");
         items.reverse();
+
+
 
         System.out.println("-------Testing the searching Algorithms------------");
         int searched_number =  search4.exponentialSearch(sorted_numbers , 7);

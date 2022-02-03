@@ -39,8 +39,8 @@ public class ArraysDemo {
            items = newItems;
        }
 
-//        Add item at the end of the array
-         items[count++] = item;
+      //  Add item at the end of the array
+        items[count++] = item;
 
 
    }
