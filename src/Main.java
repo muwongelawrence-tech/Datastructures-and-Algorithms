@@ -3,6 +3,9 @@ import java.util.Arrays;
 
 public class Main {
     public static void main(String[] args){
+
+        //use arrays if you know the number of items to store.
+
          int[] numbers = { 1,5,8,2,3,8,4,6,7,10,9 };
          int[] sorted_numbers = { 1,2,3,4,5,6,7 };
 
@@ -29,6 +32,8 @@ public class Main {
 //        System.out.println(items_2.indexOf(40));
 //        items_2.removeFirst();
         items_2.removeLast();
+        var array = items_2.toArray();
+        System.out.println(Arrays.toString(array));
         System.out.println(items_2.contains(30));
 
         ArraysDemo items = new ArraysDemo(5);

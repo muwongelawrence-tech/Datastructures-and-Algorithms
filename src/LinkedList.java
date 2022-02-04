@@ -9,6 +9,7 @@ public class LinkedList {
     //Delete at end O(n)
     //Delete at beginning O(1)
     //Delete in the middle O(n)
+    //Linked lists don't waste memory.
 
    //creating a private node class.
     private class Node {
@@ -22,6 +23,7 @@ public class LinkedList {
 
     private Node first;
     private Node last;
+    private int size;
 
     // adding an item ata the end of the linked list.
     public void addLast(int item){
@@ -34,6 +36,8 @@ public class LinkedList {
              last.next = node;
              last = node;
          }
+
+         size++;
     }
 
     // adding an item ata the beginning of the linked list.
@@ -47,6 +51,8 @@ public class LinkedList {
             node.next = first;
             first = node;
         }
+
+        size++;
     }
 
     public int indexOf(int item){
@@ -74,15 +80,18 @@ public class LinkedList {
        if(isEmpty())
            throw new NoSuchElementException();
 
+       // if the linkedlist contains only one element.
        if(first == last){
            first = last = null;
-            return;
+       }
+       else {
+           var second = first.next;
+           // removing the link between 10 and 20 (10 --> 20)
+           first.next = null;
+           first = second;
        }
 
-    var second = first.next;
-    // removing the link between 10 and 20 (10 --> 20)
-    first.next = null;
-    first = second;
+       size--;
 
     }
 
@@ -96,17 +105,47 @@ public class LinkedList {
 
         if(first == last){
            first = last = null;
-           return;
+        }
+        else {
+            //get the previous node before the last node.
+            var previous = getPrevious(last);
+            last = previous;
+            // reclaiming memory by the gagagge collector
+            last.next = null;
         }
 
-        //get the previous node bofore the last node.
-        var previous = getPrevious(last);
-        last = previous;
-        // reclaiming memory by the gagagge collector
-        last.next = null;
-
+        size--;
 
     }
+
+    // returns the size of the linkedlist
+    public int size() {
+        return size;
+    }
+
+    //converting a linkedlist to an array.
+    public int[] toArray(){
+        int[] array = new int[size];
+        var current = first;
+        var index = 0;
+        while(current != null){
+            array[index++] = current.value;
+            current = current.next;
+        }
+
+        return array;
+    }
+
+    // how to reverse a linkedlist
+//    public void reverse(){
+//        int index = size - 1;
+//        var current = last;
+//         while(current != null){
+//             current = current.next;
+//             index--;
+//         }
+//
+//    }
 
     private Node getPrevious(Node node){
         var current = first;
