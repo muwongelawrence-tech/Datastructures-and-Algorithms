@@ -110,7 +110,7 @@ public class LinkedList {
             //get the previous node before the last node.
             var previous = getPrevious(last);
             last = previous;
-            // reclaiming memory by the gagagge collector
+            // reclaiming memory by the gabagge collector
             last.next = null;
         }
 
@@ -136,17 +136,51 @@ public class LinkedList {
         return array;
     }
 
-    // how to reverse a linkedlist
-//    public void reverse(){
-//        int index = size - 1;
-//        var current = last;
-//         while(current != null){
-//             current = current.next;
-//             index--;
-//         }
-//
-//    }
+//    how to reverse a linkedlist
+    public void reverse(){
+        if(isEmpty()) return;
 
+        // changing the direction of the links.
+        var previous = first;
+        var current = first.next;
+
+        while(current != null){
+             var next = current.next;
+             current.next = previous;
+            previous = current;
+             current = next;
+        }
+
+        last = first;
+        last.next = null;
+        first = previous;
+
+    }
+
+    // finding the kth node from the end of the linked list
+    // in one pass.
+
+    public int  getKthFromTheEnd(int k){
+
+        if(isEmpty())
+            throw new IllegalStateException();
+
+        var a = first;
+        var b = first;
+        for(int i = 0; i < k-1; i++){
+            b = b.next;
+           if(b == null)
+               throw new IllegalArgumentException();
+
+        }
+
+        while(b != last){
+             a = a.next;
+             b = b.next;
+        }
+
+        return a.value;
+    }
     private Node getPrevious(Node node){
         var current = first;
 

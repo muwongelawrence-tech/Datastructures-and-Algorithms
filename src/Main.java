@@ -31,10 +31,12 @@ public class Main {
         items_2.addLast(30);
 //        System.out.println(items_2.indexOf(40));
 //        items_2.removeFirst();
-        items_2.removeLast();
+//        items_2.removeLast();
+//        items_2.reverse();
+        System.out.println(items_2.getKthFromTheEnd(3));
         var array = items_2.toArray();
         System.out.println(Arrays.toString(array));
-        System.out.println(items_2.contains(30));
+//        System.out.println(items_2.contains(30));
 
         ArraysDemo items = new ArraysDemo(5);
         System.out.println("-------working with arrays----------");
@@ -92,6 +94,10 @@ public class Main {
         System.out.println("6.** sorting the array using  countingSort  Algorithm **");
         sorter5.sort(numbers , 10);
         System.out.println(Arrays.toString(numbers));
+
+        // String Manipulation implementations
+        String reversed = StringManipulation.reverse("MUWONGE");
+        System.out.println(reversed);
 
 
 
