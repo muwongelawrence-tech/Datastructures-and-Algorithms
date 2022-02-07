@@ -99,6 +99,14 @@ public class Main {
         String reversed = StringManipulation.reverse("MUWONGE");
         System.out.println(reversed);
 
+        // strings are rotations of each other
+        boolean x = StringManipulation.areRotations("ABCD","DABC");
+        System.out.println(x);
+
+        // removing duplicates from strings
+         String removed = StringManipulation.removeDuplicates("Trees are beautiful");
+        System.out.println(removed);
+
 
 
 
