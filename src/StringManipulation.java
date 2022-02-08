@@ -1,5 +1,4 @@
-import java.util.HashSet;
-import java.util.Set;
+import java.util.*;
 
 public class StringManipulation {
     public static int countVowels(String str){
@@ -71,7 +70,7 @@ public class StringManipulation {
 
         if(str == null)
             return "";
-        
+
         StringBuilder output = new StringBuilder();
         Set<Character> seen = new HashSet<>();
 
@@ -86,4 +85,48 @@ public class StringManipulation {
 
         return output.toString();
     }
+
+    public static char  getMaxOccuringChar(String str){
+//        Map<Character , Integer> frequencies = new HashMap<>();
+//        for(var ch : str.toCharArray()){
+//            if(frequencies.containsKey(ch))
+//                frequencies.replace(ch , frequencies.get(ch))
+//            else
+//                frequencies.put(ch, 1);
+//        }
+
+        if(str == null || str.isEmpty())
+            throw new IllegalArgumentException();
+
+        final int ASCII_SIZE =256;
+        int[] frequencies = new int[ASCII_SIZE];
+        for(var ch: str.toCharArray())
+            frequencies[ch]++;
+
+        int max = 0;
+        char result = ' ';
+
+        for(int i = 0; i < frequencies.length; i++)
+            if(frequencies[i] > max){
+                max = frequencies[i];
+                result = (char) i;
+            }
+
+
+    return result;
+
+    }
+
+    public static String capitalize(String sentence){
+        if(sentence == null || sentence.trim().isEmpty())
+            return "";
+
+        String[] words = sentence.trim().replaceAll(" +"," ").split(" ");
+        for(int i = 0; i < words.length; i++){
+          words[i] = words[i].substring(0,1).toUpperCase() + words[i].substring(1).toLowerCase();
+        }
+
+       return  String.join(" ", words);
+    }
+
 }

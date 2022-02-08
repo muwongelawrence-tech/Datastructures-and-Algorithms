@@ -107,6 +107,16 @@ public class Main {
          String removed = StringManipulation.removeDuplicates("Trees are beautiful");
         System.out.println(removed);
 
+        // most reapeted character in the string
+        var most_repeated = StringManipulation.getMaxOccuringChar("Trees are beautiful");
+        System.out.println(most_repeated);
+
+        //Sentence Capitalization(capitalize every first letter of a sentence.
+        String capitalized = StringManipulation.capitalize("today is a great day");
+        System.out.println(capitalized);
+
+
+
 
 
 
