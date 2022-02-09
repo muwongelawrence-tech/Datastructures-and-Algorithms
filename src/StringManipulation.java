@@ -129,4 +129,46 @@ public class StringManipulation {
        return  String.join(" ", words);
     }
 
+    // Strings that are Angrams of each other.
+    public static boolean areAnagrams(String first , String second){
+        //optimizing for the larger input.
+        if(first == null || second == null || first.length() != second.length())
+            return false;
+
+        var array1 = first.toLowerCase().toCharArray();
+        Arrays.sort(array1);
+
+        var array2 = second.toLowerCase().toCharArray();
+        Arrays.sort(array2);
+
+        return Arrays.equals(array1,array2);
+
+    }
+
+    public static boolean areAnagram2(String first , String second){
+        if(first == null || second == null)
+            return false;
+
+        final int ENGLISH_ALPHABET = 26;
+        int[] frequencies = new int[ENGLISH_ALPHABET];
+
+        first = first.toLowerCase();
+
+        for(int i = 0; i < first.length(); i++){
+            frequencies[first.charAt(i) - 'a']++;
+        }
+
+        second = second.toLowerCase();
+
+        for(int i = 0; i < second.length(); i++){
+            int index = second.charAt(i) - 'a';
+            if(frequencies[index] == 0)
+                return false;
+
+            frequencies[index]--;
+        }
+
+        return true;
+    }
+
 }
