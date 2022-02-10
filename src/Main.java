@@ -115,6 +115,11 @@ public class Main {
         String capitalized = StringManipulation.capitalize("today is a great day");
         System.out.println(capitalized);
 
+        //checking whether a string is a palindrome
+        var result = StringManipulation.isPalindrome2("ABBA");
+        System.out.println(result);
+
+
 
 
 
