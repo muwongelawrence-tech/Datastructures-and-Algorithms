@@ -124,6 +124,21 @@ public class Main {
         var result = StringManipulation.isPalindrome2("ABBA");
         System.out.println(result);
 
+        //working with queues
+        System.out.println("-----------Queues------------");
+        queue.enqueue(5);
+        queue.enqueue(6);
+        queue.enqueue(6);
+        queue.enqueue(6);
+        queue.enqueue(7);
+        queue.dequeue();
+        queue.dequeue();
+        queue.enqueue(10);
+
+        System.out.println(queue.size());
+
+        System.out.println(queue.toString());
+
 
 
 
