@@ -23,6 +23,11 @@ public class Main {
         TernarySearch search3 = new TernarySearch();
         ExponentialSearch search4 = new ExponentialSearch();
 
+        //Queues
+
+        ArrayQueue queue = new ArrayQueue(5);
+
+
         // Data Structures
         //Linked lists
         LinkedList items_2 = new LinkedList();
