@@ -44,12 +44,27 @@ public class ArrayQueue {
             }
     }
 
+    //reversing the queue.
+    public  void reverse(){
+
+        int[] reversed = new int[count];
+        int reversecount = 0;
+
+        for(int i = count - 1 ; i >= 0; i-- ){
+            reversed[reversecount] = items[i];
+            reversecount++;
+        }
+
+        System.out.println(Arrays.toString(reversed));
+
+    }
+
     public int size(){
         return count;
     }
 
     private boolean isfull(){
-        return rear == items.length -1;
+        return rear == items.length - 1;
     }
 
 

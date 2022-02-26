@@ -28,6 +28,7 @@ public class Main {
         ArrayQueue queue = new ArrayQueue(5);
 
 
+
         // Data Structures
         //Linked lists
         LinkedList items_2 = new LinkedList();
@@ -128,16 +129,17 @@ public class Main {
         System.out.println("-----------Queues------------");
         queue.enqueue(5);
         queue.enqueue(6);
-        queue.enqueue(6);
-        queue.enqueue(6);
         queue.enqueue(7);
-        queue.dequeue();
-        queue.dequeue();
-        queue.enqueue(10);
-
-        System.out.println(queue.size());
+        queue.enqueue(8);
+        queue.enqueue(9);
+//        queue.dequeue();
+//        queue.dequeue();
+//        queue.enqueue(10);
+//
+//        System.out.println(queue.size());
 
         System.out.println(queue.toString());
+        queue.reverse();
 
 
 
