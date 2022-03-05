@@ -23,9 +23,10 @@ public class Main {
         TernarySearch search3 = new TernarySearch();
         ExponentialSearch search4 = new ExponentialSearch();
 
-        //Queues
+        //Queues and Circular Queues
 
         ArrayQueue queue = new ArrayQueue(5);
+        ArrayCircularQueue Cqueue = new ArrayCircularQueue(6);
 
 
 
@@ -132,14 +133,27 @@ public class Main {
         queue.enqueue(7);
         queue.enqueue(8);
         queue.enqueue(9);
-//        queue.dequeue();
-//        queue.dequeue();
-//        queue.enqueue(10);
-//
-//        System.out.println(queue.size());
-
+        //        queue.dequeue();
+        //        queue.dequeue();
+        //        queue.enqueue(10);
+        //        System.out.println(queue.size());
         System.out.println(queue.toString());
         queue.reverse();
+
+        //working with  circular queues
+        System.out.println("-----------Circular Queues------------");
+        Cqueue.enqueue(3);
+        Cqueue.enqueue(8);
+        Cqueue.enqueue(9);
+        Cqueue.enqueue(10);
+        Cqueue.enqueue(11);
+        Cqueue.enqueue(12);
+        Cqueue.dequeue();
+        Cqueue.dequeue();
+        Cqueue.enqueue(13);
+        Cqueue.enqueue(14);
+        System.out.println(Cqueue.size());
+        System.out.println(Cqueue.toString());
 
 
 
