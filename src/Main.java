@@ -28,6 +28,10 @@ public class Main {
         ArrayQueue queue = new ArrayQueue(5);
         ArrayCircularQueue Cqueue = new ArrayCircularQueue(6);
 
+        //Stacks
+
+        StackArray stack = new StackArray(5);
+
 
 
         // Data Structures
@@ -155,6 +159,23 @@ public class Main {
         System.out.println(Cqueue.size());
         System.out.println(Cqueue.toString());
 
+        //working with  stacks
+        System.out.println("-----------Stacks------------");
+        stack.push(1);
+        stack.push(2);
+        stack.push(3);
+        stack.pop();
+        stack.push(6);
+        stack.push(14);
+        stack.push(20);
+        stack.push(25);
+//        stack.pop();
+        stack.pop();
+        stack.peek();
+        System.out.println(" There are " + stack.size() + " elements in the stack");
+        stack.show();
+        System.out.println("----Reversed Stack--------");
+        stack.reverse();
 
 
 
