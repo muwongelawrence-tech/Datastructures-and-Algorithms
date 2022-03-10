@@ -23,10 +23,12 @@ public class Main {
         TernarySearch search3 = new TernarySearch();
         ExponentialSearch search4 = new ExponentialSearch();
 
-        //Queues and Circular Queues
+        //Queues and Circular Queues and Priority Queues
 
         ArrayQueue queue = new ArrayQueue(5);
         ArrayCircularQueue Cqueue = new ArrayCircularQueue(6);
+
+        PriorityQueue pqueue = new PriorityQueue();
 
         //Stacks
 
@@ -176,6 +178,17 @@ public class Main {
         stack.show();
         System.out.println("----Reversed Stack--------");
         stack.reverse();
+
+        //working with  priority Queue
+        System.out.println("-----------Priority Queue------------");
+        System.out.println(" it arranges objects in order of their priority. ");
+        pqueue.add(5);
+        pqueue.add(3);
+        pqueue.add(6);
+        pqueue.add(1);
+        pqueue.add(4);
+        System.out.println(pqueue);
+
 
 
 
