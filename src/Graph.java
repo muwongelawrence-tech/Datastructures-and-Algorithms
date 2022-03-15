@@ -11,14 +11,21 @@ public class Graph {
         public Node(String label){
             this.label = label;
         }
+
+        @Override
+        public String toString(){
+            return label;
+        }
     }
 
 
     private Map<String , Node> nodes = new HashMap<>();
+    private Map<Node, List<Node>> adjacencyList = new HashMap<>();
 
     public void  addNode(String label){
         var node = new Node(label);
         nodes.putIfAbsent(label , node);
+        adjacencyList.putIfAbsent(node , new ArrayList<>());
 
     }
 
@@ -30,6 +37,20 @@ public class Graph {
         var toNode = nodes.get(to);
         if(toNode == null)
             throw new IllegalArgumentException();
+
+        //for directed graphs.
+        adjacencyList.get(fromNode).add(toNode);
+        //for undirected graphs.
+        adjacencyList.get(toNode).add(fromNode);
+    }
+
+    public void print() {
+        for(var source: adjacencyList.keySet()){
+           var targets = adjacencyList.get(source);
+           if(!targets.isEmpty())
+               System.out.println(source + "is connected to" + targets);
+
+        }
     }
 
 }
