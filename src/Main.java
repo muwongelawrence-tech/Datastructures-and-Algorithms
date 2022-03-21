@@ -34,6 +34,10 @@ public class Main {
 
         StackArray stack = new StackArray(5);
 
+        //Graphs
+
+        var graph = new Graph();
+
 
 
         // Data Structures
@@ -190,7 +194,14 @@ public class Main {
         System.out.println(pqueue);
 
         // working with Graphs
-        System.out.println("-----------Graph Data structure------------");
+        System.out.println("-----------Graph Data structure ------------");
+        graph.addNode("A");
+        graph.addNode("B");
+        graph.addNode("C");
+        graph.addEdge("A","B");
+        graph.addEdge("A","C");
+        graph.removeEdge("A","C");
+        graph.print();
 
 
 
