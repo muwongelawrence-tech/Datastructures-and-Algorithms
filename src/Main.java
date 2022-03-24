@@ -203,6 +203,8 @@ public class Main {
         graph.removeEdge("A","C");
         graph.traverseDepthFirst("C");
 //        graph.print();
+        var list = graph.topologicalSort();
+        System.out.println(list);
 
 
 
