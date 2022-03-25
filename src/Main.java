@@ -195,16 +195,26 @@ public class Main {
 
         // working with Graphs
         System.out.println("-----------Graph Data structure ------------");
+//        graph.addNode("A");
+//        graph.addNode("B");
+//        graph.addNode("C");
+//        graph.addEdge("A","B");
+//        graph.addEdge("A","C");
+//        graph.removeEdge("A","C");
+//        graph.traverseDepthFirst("C");
+//        graph.print();
+//        var list = graph.topologicalSort();
+//        System.out.println(list);
+
+        // verifying that there is no cycle in the graph
         graph.addNode("A");
         graph.addNode("B");
         graph.addNode("C");
         graph.addEdge("A","B");
+        graph.addEdge("B","C");
         graph.addEdge("A","C");
-        graph.removeEdge("A","C");
-        graph.traverseDepthFirst("C");
-//        graph.print();
-        var list = graph.topologicalSort();
-        System.out.println(list);
+
+        System.out.println(graph.hasCycle());
 
 
 
