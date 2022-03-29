@@ -37,6 +37,7 @@ public class Main {
         //Graphs
 
         var graph = new Graph();
+        var weighted_graph = new WeightedGraph();
 
 
 
@@ -207,14 +208,23 @@ public class Main {
 //        System.out.println(list);
 
         // verifying that there is no cycle in the graph
-        graph.addNode("A");
-        graph.addNode("B");
-        graph.addNode("C");
-        graph.addEdge("A","B");
-        graph.addEdge("B","C");
-        graph.addEdge("A","C");
+        //graph.addNode("A");
+//        graph.addNode("B");
+//        graph.addNode("C");
+//        graph.addEdge("A","B");
+//        graph.addEdge("B","C");
+//        graph.addEdge("A","C");
+//        System.out.println(graph.hasCycle());
 
-        System.out.println(graph.hasCycle());
+        //below is testing for undirected weighted graph
+        weighted_graph.addNode("A");
+        weighted_graph.addNode("B");
+        weighted_graph.addNode("C");
+        weighted_graph.addEdge("A","B",4);
+        weighted_graph.addEdge("A","C",5);
+        weighted_graph.print();
+
+
 
 
 
