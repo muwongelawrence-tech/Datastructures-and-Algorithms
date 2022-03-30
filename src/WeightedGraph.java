@@ -31,7 +31,7 @@ public class WeightedGraph {
 
         @Override
         public String toString(){
-            return from + "->" + to;
+            return from + " -> " + to;
         }
 
     }
@@ -74,6 +74,8 @@ public class WeightedGraph {
         }
 
     }
+
+    // objected oriented  way of developing a weighted graph.
 
 
 
