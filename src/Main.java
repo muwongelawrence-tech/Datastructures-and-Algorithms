@@ -39,6 +39,9 @@ public class Main {
         var graph = new Graph();
         var weighted_graph = new WeightedGraph();
 
+        // Trees Section
+         Tree tree = new Tree();
+
 
 
         // Data Structures
@@ -223,6 +226,17 @@ public class Main {
         weighted_graph.addEdge("A","B",4);
         weighted_graph.addEdge("A","C",5);
         weighted_graph.print();
+
+        //below is testing for  Binary Trees
+        System.out.println("--------------------Section for binary trees----------------");
+        tree.insert(7);
+        tree.insert(4);
+        tree.insert(9);
+        tree.insert(6);
+        tree.insert(1);
+        tree.insert(6);
+        tree.insert(8);
+        System.out.println("Done");
 
 
 
